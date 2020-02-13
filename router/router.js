@@ -33,12 +33,30 @@ router.post('/addtask', function (req, res) {
     },1000)
 });
 router.get("/", function(req, res) {
-    res.render("index", { taskArr });
+    setTimeout(()=>{
+        res.render("index", { taskArr });
+    },1000)
+    
+    
 });
 
-router.get("/taskEdit", function(req, res) {
-    res.render("taskEdit", { taskArr });
+router.get("/taskEdit/:id", async function(req, res) {
+    const editItem = await Task.findOne({
+        listitem: taskArr[req.params.id]
+
+    })
+    const index = req.params.id
+    res.render("taskEdit", { editItem, index });
 });
+
+router.post("/taskEdit/:id", async function(req, res) {
+    await Task.replaceOne(
+        { listitem: taskArr[req.params.id] },
+        { listitem: req.body.edittask },
+    )
+    taskArr[req.params.id] = req.body.edittask
+    res.redirect("/")
+})
 
 router.get("/delete/:id", function(req, res){
     deleteTask(req.params.id)

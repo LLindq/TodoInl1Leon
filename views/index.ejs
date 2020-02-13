@@ -12,7 +12,7 @@
        <button type="submit"> Add Task </button>
     <h2> Your planned tasks </h2>
         <% for( var i = 0; i < taskArr.length; i++) { %>
-        <li><%= taskArr[i] %> <a href="/delete/<%= i %>">Delete</a> </li>
+        <li><%= taskArr[i] %> <a href="/taskEdit/<%= i %>">Edit</a> <a href="/delete/<%= i %>">Delete</a>  </li>
     <% } %>
 </form>
 </div>
