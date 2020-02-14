@@ -25,7 +25,7 @@ async function deleteTask(i) {
 }
 
 router.post('/addtask', function (req, res) {
-    var newTask = req.body.newtask;
+    const newTask = req.body.newtask;
     pushTask(newTask);
     taskArr.push(newTask);
     setTimeout(()=>{
