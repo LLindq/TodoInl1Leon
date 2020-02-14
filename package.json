@@ -16,7 +16,5 @@
     "mongoose": "^5.8.11",
     "nodemon": "^2.0.2"
   },
-  "devDependencies": {
-    "cypress": "^4.0.1"
-  }
+  "devDependencies": {}
 }
