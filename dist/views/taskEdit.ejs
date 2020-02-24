@@ -1,0 +1,14 @@
+<html>
+  <head>
+    <title> ToDo App - Edit </title>
+  </head>
+<body>
+  <div class="container">
+     <h2> Edit <%= editItem.listitem %> </h2>
+<form action ="/taskEdit/<%= index %>" method="POST">
+       <input type="text" name="edittask" placeholder="Edit Task"><br><br>       
+       <button type="submit"> Edit Task </button>
+</form>
+</div>
+</body>
+</html>

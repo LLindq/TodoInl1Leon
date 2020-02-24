@@ -21,4 +21,5 @@ const options ={
   mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0-1lxdq.mongodb.net/test`, options).then(()=> {
     console.log("Successful")  
     app.listen(port);
+    //test
 })
