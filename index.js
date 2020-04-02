@@ -1,16 +1,17 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const router = require('./router/router.js');
-const dotenv = require('dotenv')
+// const dotenv = require('dotenv')
 const bodyParser = require('body-parser');
 const app = express();
 // const jquery = require('jquery');
+const config = require('./config/config')
 
 
 //Static file location
 app.use(express.static(__dirname + '/public'));
 
-dotenv.config({ path: './config/.env' });
+// dotenv.config({ path: './config/.env' });
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
@@ -41,7 +42,7 @@ const options ={
       useUnifiedTopology: true, 
       useNewUrlParser: true
   }
-  mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0-1lxdq.mongodb.net/test`, options).then(()=> {
+  mongoose.connect(config.databaseURL, options).then(()=> {
     console.log("Successful")  
     app.listen(port);
     //test
