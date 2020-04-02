@@ -7,6 +7,9 @@
     "start": "node index.js",
     "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.loc --copy-files"
   },
+  "engines": {
+    "node": "12.14.1"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
