@@ -4,7 +4,7 @@ const router = require('./router/router.js');
 const dotenv = require('dotenv')
 const bodyParser = require('body-parser');
 const app = express();
-const jquery = require('jquery');
+// const jquery = require('jquery');
 
 
 //Static file location
