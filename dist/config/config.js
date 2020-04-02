@@ -3,8 +3,9 @@
 require('dotenv').config();
 
 var config = {
-    DATABASE: process.env.DB_USER,
-    PASS: process.env.DB_PASS
+    databaseURL: process.env.DATABASE,
+    DB_USER: process.env.DB_USER,
+    DB_PASS: process.env.DB_PASS
 };
 
 module.exports = config;
