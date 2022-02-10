@@ -20,7 +20,7 @@
     "heroku": "^7.39.1",
     "jquery": "^3.4.1",
     "mongoose": "^5.8.11",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "nodemon": "^2.0.2"
   },
   "devDependencies": {
